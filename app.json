@@ -1,0 +1,7 @@
+{
+    "name": "Musagim",
+    "description": "A sample Node.js app for studying",
+    "repository": "https://github.com/heroku/musagim",
+    "logo": "http://node-js-sample.herokuapp.com/node.svg",
+    "keywords": ["node", "express", "static"]
+}
