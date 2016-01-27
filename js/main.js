@@ -14,7 +14,7 @@ function showDefinition(){
 }
 
 function hideButton(button){
-    button.setAttribute("class", 'definition hidden');
+    button.setAttribute("class", 'hidden');
 }
 
 function showButton(element){
@@ -22,7 +22,7 @@ function showButton(element){
 }
 
 function getDefinitionButton(){
-    return document.querySelector("button.definition");
+    return document.querySelector("#defineContainer button");
 }
 
 function getDefinitionLabel(){

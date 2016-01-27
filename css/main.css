@@ -16,17 +16,23 @@
     font-size: 23px;
 }
 
+#defineContainer>span {
+    width: 250px;
+}
+
 .musagContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*text-align: center;*/
-    /*white-space: pre-line;*/
 }
 
 .definition {
     margin: 20px;
+    width: 163px;
+    height: 37px;
+    display: inline-block;
+    text-align: center;
 }
 
 button {
@@ -36,7 +42,7 @@ button {
     font-family: Arial;
     color: #ffffff;
     font-size: 20px;
-    background: #565d61;
+    background: #0C527A;
     padding: 5px 10px 5px 10px;
     text-decoration: none;
 }
