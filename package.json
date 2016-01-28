@@ -1,25 +1,29 @@
 {
-    "name": "musagim",
-    "version": "0.1.0",
-    "description": "A sample Node.js app for studying",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "dependencies": {
-        "express": "4.13.3"
-    },
-    "engines": {
-        "node": "0.12.7"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/heroku/musagin"
-    },
-    "keywords": [
-        "node",
-        "heroku",
-        "express"
-    ],
-    "license": "MIT"
+  "name": "musagim",
+  "version": "0.1.0",
+  "description": "A sample Node.js app for studying",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "express": "4.13.3",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/musagin"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
