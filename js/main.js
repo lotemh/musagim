@@ -49,8 +49,8 @@ var Definition = React.createClass({
         return (
             <div>
                 <div id="defineContainer" className={store.getState().definition}>
-                    <span>
-                        <button className="definition" onClick={this.showDefinition}> Show Definition</button>
+                    <span className="definitionButton">
+                        <button onClick={this.showDefinition}> Show Definition</button>
                     </span>
 
                     <DataLabel data={store.getState().data}/>
