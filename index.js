@@ -10,7 +10,8 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/data', function(request, response) {
-    var path = 'data/' + request.param('id') + '.json';
+    var dataId = request.param('id') || 'demo';
+    var path = 'data/' + dataId + '.json';
     response.sendfile(path, {root: './public'});
 });
 
