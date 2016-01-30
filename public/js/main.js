@@ -1,8 +1,6 @@
-/**
- * Created by lotem on 1/23/2016.
- */
 
 var used = [];
+var store;
 
 function reducer(state, action){
     var item;
@@ -50,8 +48,36 @@ function increaseIndex(index){
     return (index + 1) % data.length;
 }
 
-var store = Redux.createStore(reducer);
-store.subscribe(render);
+var data = [];
+
+function getData(dataId){
+    $.ajax({
+        url: 'data?id=' + dataId,
+        dataType: 'json',
+        type: 'GET',
+        success: function(result){
+            data = result.data;
+            initStore();
+        }.bind(this),
+        error: function(xhr, status, err){
+            console.error("", status, err.toString());
+        }.bind(this)
+    });
+}
+
+(function() {
+    var dataId = location.search.replace("?id=", '');
+    getData(dataId);
+}());
+
+
+function initStore(){
+     store = Redux.createStore(reducer);
+    store.subscribe(render);
+    render();
+}
+
+
 
 var Definition = React.createClass({
     showDefinition: function(){
@@ -118,5 +144,3 @@ function render(){
         document.getElementById("root")
     );
 }
-
-render();
