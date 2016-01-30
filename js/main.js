@@ -1,14 +1,14 @@
 /**
  * Created by lotem on 1/23/2016.
  */
-var index;
+
+var used = [];
 
 function reducer(state, action){
     var item;
 
     if (typeof state === 'undefined'){
-        index = 0;
-        item = data[index];
+        item = getNextTerm();
         return {
             key: item.key,
             data: item.value,
@@ -19,8 +19,7 @@ function reducer(state, action){
         case 'SHOW_DEFINITION':
             return  _.defaults({definition: 'label'}, state);
         case 'NEXT':
-            index = increaseIndex(index);
-            item = data[index];
+            item = getNextTerm();
             return {
                 key: item.key,
                 data: item.value,
@@ -29,6 +28,22 @@ function reducer(state, action){
         default:
             return state;
     }
+}
+
+function getRandomIndex(arrLength){
+    return Math.floor(Math.random()*arrLength);
+}
+
+function getNextTerm(){
+    if (data.length === 0){
+        data = used;
+        used = [];
+    }
+    var randomIndex = getRandomIndex(data.length);
+    var removed = data.splice(randomIndex,1);
+    used = used.concat(removed);
+    console.log(used);
+    return removed[0];
 }
 
 function increaseIndex(index){
