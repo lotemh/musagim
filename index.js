@@ -15,9 +15,7 @@ app.get('/data', function(request, response) {
 });
 
 app.get('/', function(request, response) {
-    response.send('js/index', {
-        dataId: request.query.id
-    });
+    response.send('js/index');
 });
 
 app.listen(app.get('port'), function() {
