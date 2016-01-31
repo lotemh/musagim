@@ -1,51 +1,40 @@
 
-var used = [];
 var store;
 
 function reducer(state, action){
-    var item;
-
     if (typeof state === 'undefined'){
-        item = getNextTerm();
-        return {
-            key: item.key,
-            data: item.value,
-            definition: 'button'
-        };
+        return nextDataReducer({data: data});
     }
     switch (action.type){
         case 'SHOW_DEFINITION':
             return  _.defaults({definition: 'label'}, state);
         case 'NEXT':
-            item = getNextTerm();
-            return {
-                key: item.key,
-                data: item.value,
-                definition: 'button'
-            };
+           return nextDataReducer(state);
         default:
             return state;
     }
 }
 
-function getRandomIndex(arrLength){
-    return Math.floor(Math.random()*arrLength);
-}
-
-function getNextTerm(){
+function nextDataReducer(state){
+    var item, used, randomIndex;
+    used = state.used || [];
     if (data.length === 0){
         data = used;
         used = [];
     }
-    var randomIndex = getRandomIndex(data.length);
+    randomIndex = getRandomIndex(data.length);
     var removed = data.splice(randomIndex,1);
-    used = used.concat(removed);
-    console.log(used);
-    return removed[0];
+    item = removed[0];
+    return {
+        used: used.concat(removed),
+        key: item.key,
+        value: item.value,
+        definition: 'button'
+    };
 }
 
-function increaseIndex(index){
-    return (index + 1) % data.length;
+function getRandomIndex(arrLength){
+    return Math.floor(Math.random()*arrLength);
 }
 
 var data = [];
@@ -57,7 +46,7 @@ function getData(dataId){
         type: 'GET',
         success: function(result){
             data = result.data;
-            initStore();
+            initStore(data);
         }.bind(this),
         error: function(xhr, status, err){
             console.error("", status, err.toString());
@@ -71,8 +60,8 @@ function getData(dataId){
 }());
 
 
-function initStore(){
-     store = Redux.createStore(reducer);
+function initStore(data){
+    store = Redux.createStore(reducer);
     store.subscribe(render);
     render();
 }
@@ -94,14 +83,14 @@ var Definition = React.createClass({
                         <button onClick={this.showDefinition}> Show Definition</button>
                     </span>
 
-                    <DataLabel data={store.getState().data}/>
+                    <DataLabel data={store.getState().value}/>
                     <Musag data={store.getState().key}/>
                 </div>
                 <div>
                     <button className="btn" onClick={this.nextDefinition}>Next</button>
                 </div>
             </div>
-        );
+            );
     }
 });
 
@@ -109,7 +98,7 @@ var Musag = React.createClass({
     render: function() {
         return (
             <span>{this.props.data}</span>
-        );
+            );
     }
 });
 
@@ -117,7 +106,7 @@ var DataLabel = React.createClass({
     render: function() {
         return (
             <label>{this.props.data}</label>
-        );
+            );
     }
 });
 
@@ -134,7 +123,7 @@ var App = React.createClass({
                     <Definition data={data}/>
                 </div>
             </div>
-        );
+            );
     }
 });
 
