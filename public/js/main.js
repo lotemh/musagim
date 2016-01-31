@@ -1,9 +1,8 @@
-
 var store;
 
 function reducer(state, action){
-    if (typeof state === 'undefined'){
-        return nextDataReducer({data: data});
+    if (typeof state.key === 'undefined'){
+        return nextDataReducer(state);
     }
     switch (action.type){
         case 'SHOW_DEFINITION':
@@ -16,16 +15,18 @@ function reducer(state, action){
 }
 
 function nextDataReducer(state){
-    var item, used, randomIndex;
+    var item, used, randomIndex, data;
     used = state.used || [];
+    data = state.data;
     if (data.length === 0){
         data = used;
         used = [];
     }
     randomIndex = getRandomIndex(data.length);
-    var removed = data.splice(randomIndex,1);
+    var removed = data.slice(randomIndex,randomIndex + 1);
     item = removed[0];
     return {
+        data: data.slice(0, randomIndex).concat(data.slice(randomIndex+1, data.length)),
         used: used.concat(removed),
         key: item.key,
         value: item.value,
@@ -37,16 +38,13 @@ function getRandomIndex(arrLength){
     return Math.floor(Math.random()*arrLength);
 }
 
-var data = [];
-
 function getData(dataId){
     $.ajax({
         url: 'data?id=' + dataId,
         dataType: 'json',
         type: 'GET',
         success: function(result){
-            data = result.data;
-            initStore(data);
+            initStore(result.data);
         }.bind(this),
         error: function(xhr, status, err){
             console.error("", status, err.toString());
@@ -61,7 +59,11 @@ function getData(dataId){
 
 
 function initStore(data){
-    store = Redux.createStore(reducer);
+    var defaultState = {
+        data: data,
+        used: []
+    };
+    store = Redux.createStore(reducer, defaultState);
     store.subscribe(render);
     render();
 }
@@ -120,7 +122,7 @@ var App = React.createClass({
 
                 <div className="definitionLabel">Define the next term:</div>
                 <div className="musagContainer">
-                    <Definition data={data}/>
+                    <Definition/>
                 </div>
             </div>
             );
