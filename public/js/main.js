@@ -78,6 +78,7 @@ var Definition = React.createClass({
     render: function(){
         return (
             <div>
+                <div className="definitionLabel">Define the next term:</div>
                 <div id="defineContainer" className={store.getState().definition}>
                     <span className="definitionButton">
                         <button onClick={this.showDefinition}> Show Definition</button>
@@ -117,8 +118,6 @@ var App = React.createClass({
                 <div className="menu">
                     <h1>Test is Coming</h1>
                 </div>
-
-                <div className="definitionLabel">Define the next term:</div>
                 <div className="musagContainer">
                     <Definition/>
                 </div>

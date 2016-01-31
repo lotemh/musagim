@@ -1,8 +1,11 @@
 @font-face { font-family: Dense; src: url('Dense-Regular.otf'); }
+@font-face { font-family: hillel;  src: url('hillelclm-medium-webfont.woff') format('woff');}
 
 .definitionLabel {
-    font-size: 23px;
-    text-align: center;
+    font-size: 38px;
+    text-align: left;
+    font-family: Dense, Arial;
+    margin-left: calc(10% - 20px);
 }
 
 #defineContainer .definitionButton {
@@ -34,14 +37,16 @@
     margin: 15px;
     display: inline-block;
     width: 40%;
-    border: solid 1pt #E4E1E1;
-    box-shadow:0px 0px 5px #333;
+    border: solid 1pt #FDFCFC;
+    box-shadow:1px 1px 5px #333;
     height: 250px;
     text-align: right;
-    padding: 5px;
-    font-family: -webkit-pictograph;
+    padding: 5px 10px;
+    font-family: hillel;
     background: #FDFBF8;
     border-radius: 5px;
+    direction: rtl;
+    letter-spacing: -1px;
 }
 
 #defineContainer {
@@ -68,7 +73,6 @@
 
 .musagContainer {
     text-align: center;
-    border: solid 3px #E4E1E1;
     margin: 10px 0;
     padding: 10px 0;
 }
@@ -77,13 +81,14 @@ button {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    font-family: Arial;
-    font-size: 20px;
+    font-family: Dense;
+    font-size: 30px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    background: rgb(12, 82, 122);
-    padding: 9px 30px;
+    background: #852174;
+    padding: 4px 30px;
     outline: none;
+    border: none;
 }
 
 body {
