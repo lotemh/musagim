@@ -68,8 +68,6 @@ function initStore(data){
     render();
 }
 
-
-
 var Definition = React.createClass({
     showDefinition: function(){
         store.dispatch({type: "SHOW_DEFINITION"});
