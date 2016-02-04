@@ -40,7 +40,7 @@ function getRandomIndex(arrLength){
 
 function getData(dataId){
     $.ajax({
-        url: 'data?id=' + dataId,
+        url: 'data/' + dataId + '.json',
         dataType: 'json',
         type: 'GET',
         success: function(result){
