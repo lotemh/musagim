@@ -1,10 +1,10 @@
 
-var Musag = React.createClass({
+var DataLabel = React.createClass({
     render: function() {
         return (
-            <span>{this.props.data}</span>
+            <label>{this.props.data}</label>
         );
     }
 });
 
-export { Musag };
+export { DataLabel };

@@ -4,7 +4,7 @@ module.exports = {
     entry: ['./public/js/main'],
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'main.js'
+        filename: 'musagim.js'
     },
     module: {
         loaders: [
