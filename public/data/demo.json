@@ -1,12 +1,17 @@
 {
     "data": [
         {
-            "key": "1",
-            "value": "this is 1"
+            "key": "git",
+            "value": "Git is a version control system for tracking changes in computer files and collaborating on those files with multiple people"
         },
         {
-            "key": "2",
-            "value": "this is 2"
+            "key": "github",
+            "value": "Github is a web based version of Git. Github is a remote repositroy often used for open-source projects."
+        },
+        
+        {
+            "key": "revert",
+            "value": "Revert is a command that undos a commit by creating a new commit."
         }
     ]
 }
