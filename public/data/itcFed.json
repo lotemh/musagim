@@ -9,7 +9,7 @@
             "value": "this is 2"
         },
         {
-            "key": "revert",
+            "key": "git revert",
             "value": "val"
         },
          {
@@ -17,7 +17,7 @@
             "value": "val"
         },
          {
-            "key": "local repository",
+            "key": "git local repository",
             "value": "val"
         },
          {
@@ -25,47 +25,47 @@
             "value": "val"
         },
          {
-            "key": "add",
+            "key": "git add",
             "value": "val"
         },
          {
-            "key": "pull",
+            "key": "git pull",
             "value": "val"
         },
          {
-            "key": "push",
+            "key": "git push",
             "value": "val"
         },
          {
-            "key": "remote repository",
+            "key": "git remote repository",
             "value": "val"
         },
          {
-            "key": "version control system",
+            "key": "git version control system",
             "value": "val"
         },
         {
-            "key": "head",
+            "key": "git: head",
             "value": "val"
         },
         {
-            "key": "working directory",
+            "key": "git: working directory",
             "value": "val"
         },
         {
-            "key": "index, staging area",
+            "key": "git: index, staging area",
             "value": "val"
         },
         {
-            "key": "what is inside a commit",
+            "key": "git: what is inside a commit",
             "value": "val"
         },
         {
-            "key": "commit hash",
+            "key": "git: commit hash",
             "value": "val"
         },
         {
-            "key": "checkout",
+            "key": "git: checkout",
             "value": "val"
         },
         {
@@ -86,6 +86,80 @@
         {
             "key": "innerHTML",
             "value": "val"
-        }
+        },
+		
+        {
+            "key": "pseudo class",
+            "value": "val"
+        },
+		
+        {
+            "key": "DOM",
+            "value": "val"
+        },
+		{
+            "key": "css selectors",
+            "value": "val"
+        },
+		{
+            "key": "function definition vs invoking a function",
+            "value": "val"
+        },
+		{
+            "key": "DOM node",
+            "value": "val"
+        },
+		{
+            "key": "HTML tag",
+            "value": "val"
+        },
+		{
+            "key": "HTML attribute",
+            "value": "val"
+        },
+		{
+            "key": "js data types",
+            "value": "val"
+        },
+		{
+            "key": "js setTimeout",
+            "value": "val"
+        },
+		{
+            "key": "js setIntterval",
+            "value": "val"
+        },
+		{
+            "key": "js var",
+            "value": "val"
+        },
+		{
+            "key": "event propagation",
+            "value": "val"
+        },
+		{
+            "key": "propagation - bubble phase",
+            "value": "val"
+        },
+		{
+            "key": "propagation - capture phase",
+            "value": "val"
+        },
+		{
+            "key": "js scope",
+            "value": "val"
+        },
+		{
+            "key": "js local scope",
+            "value": "val"
+        },
+		{
+            "key": "js global scope",
+            "value": "val"
+        },
+		{
+            "key": "js arguments saved word",
+            "value": "val"
+        },
     ]
 }
