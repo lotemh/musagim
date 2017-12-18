@@ -160,6 +160,30 @@
 		{
             "key": "js arguments saved word",
             "value": "val"
+        },
+		{
+            "key": "OOP",
+            "value": "val"
+        },
+		{
+            "key": "instance",
+            "value": "val"
+        },
+		{
+            "key": "constructor",
+            "value": "val"
+        },
+		{
+            "key": "hasOwnProperty",
+            "value": "val"
+        },
+		{
+            "key": "prototype property",
+            "value": "val"
+        },
+		{
+            "key": "this keyword",
+            "value": "val"
         }
     ]
 }
