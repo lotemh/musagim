@@ -1,189 +1,72 @@
 {
     "data": [
         {
-            "key": "git",
-            "value": "this is 1"
+            "key": "what are the html element building block?",
+            "value": "tag type, content, attribute"
         },
         {
-            "key": "github",
-            "value": "this is 2"
+            "key": "html body tag",
+            "value": "cantianer for all the elements in the page. all of the elements will be present in the web page."
         },
         {
-            "key": "git revert",
-            "value": "val"
+            "key": "html head tag",
+            "value": "contains the meta data of the page. non of it's content is present in the page."
         },
-         {
-            "key": "git init",
-            "value": "val"
-        },
-         {
-            "key": "git local repository",
-            "value": "val"
-        },
-         {
-            "key": "git commit command",
-            "value": "val"
-        },
-         {
-            "key": "git add",
-            "value": "val"
-        },
-         {
-            "key": "git pull",
-            "value": "val"
-        },
-         {
-            "key": "git push",
-            "value": "val"
-        },
-         {
-            "key": "git remote repository",
-            "value": "val"
-        },
-         {
-            "key": "git version control system",
+        {
+            "key": "html inline element",
             "value": "val"
         },
         {
-            "key": "git: head",
+            "key": "html block element",
             "value": "val"
         },
         {
-            "key": "git: working directory",
+            "key": "name html block elements",
+            "value": "div, p, h1"
+        },
+        {
+            "key": "name html inline elements",
+            "value": "a, img, span"
+        },
+        {
+            "key": "void tag",
+            "value": "a tag with only one. looks like this: <tagName/>"
+        },
+        {
+            "key": "html br tag",
+            "value": "a void tag that represent a line break."
+        },
+        {
+            "key": "html div tag",
+            "value": "an html block element that is sometimes used to group elements."
+        },
+        {
+            "key": "html span tag",
             "value": "val"
         },
         {
-            "key": "git: index, staging area",
-            "value": "val"
+            "key": "html a tag",
+            "value": "anchor tag. used for adding links to a web page. an inline tag."
         },
         {
-            "key": "git: what is inside a commit",
-            "value": "val"
+            "key": "html target attribute",
+            "value": "values are: self, blank"
         },
         {
-            "key": "git: commit hash",
-            "value": "val"
+            "key": "html img tag",
+            "value": "attributes are: src, alt"
         },
         {
-            "key": "git: checkout",
-            "value": "val"
+            "key": "html title tag",
+            "value": "a meta data tag that is located in the head tag. the title will be presented at the top of the tab."
         },
         {
-            "key": "NAN",
-            "value": "val"
+            "key": "name the style properties that you know",
+            "value": "color, background-color, font-size..."
         },
-        
         {
-            "key": "Typeof",
-            "value": "val"
-        },
-        
-        {
-            "key": "event driven programming",
-            "value": "val"
-        },
-        
-        {
-            "key": "innerHTML",
-            "value": "val"
-        },
-		
-        {
-            "key": "pseudo class",
-            "value": "val"
-        },
-		
-        {
-            "key": "DOM",
-            "value": "val"
-        },
-		{
-            "key": "css selectors",
-            "value": "val"
-        },
-		{
-            "key": "function definition vs invoking a function",
-            "value": "val"
-        },
-		{
-            "key": "DOM node",
-            "value": "val"
-        },
-		{
-            "key": "HTML tag",
-            "value": "val"
-        },
-		{
-            "key": "HTML attribute",
-            "value": "val"
-        },
-		{
-            "key": "js data types",
-            "value": "val"
-        },
-		{
-            "key": "js setTimeout",
-            "value": "val"
-        },
-		{
-            "key": "js setIntterval",
-            "value": "val"
-        },
-		{
-            "key": "js var",
-            "value": "val"
-        },
-		{
-            "key": "event propagation",
-            "value": "val"
-        },
-		{
-            "key": "propagation - bubble phase",
-            "value": "val"
-        },
-		{
-            "key": "propagation - capture phase",
-            "value": "val"
-        },
-		{
-            "key": "js scope",
-            "value": "val"
-        },
-		{
-            "key": "js local scope",
-            "value": "val"
-        },
-		{
-            "key": "js global scope",
-            "value": "val"
-        },
-		{
-            "key": "js arguments saved word",
-            "value": "val"
-        },
-		{
-            "key": "OOP",
-            "value": "val"
-        },
-		{
-            "key": "instance",
-            "value": "val"
-        },
-		{
-            "key": "constructor",
-            "value": "val"
-        },
-		{
-            "key": "hasOwnProperty",
-            "value": "val"
-        },
-		{
-            "key": "prototype property",
-            "value": "val"
-        },
-		{
-            "key": "this keyword",
-            "value": "val"
+            "key": "what can be the content of an html element?",
+            "value": "text or another html element"
         }
     ]
 }
